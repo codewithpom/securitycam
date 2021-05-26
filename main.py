@@ -1,6 +1,6 @@
 import cv2
 import winsound
-cam = cv2.VideoCapture(1)
+cam = cv2.VideoCapture(0)
 while cam.isOpened():
     ret, frame1 = cam.read()
     ret, frame2 = cam.read()
@@ -19,4 +19,4 @@ while cam.isOpened():
         winsound.PlaySound('alert.wav', winsound.SND_ASYNC)
     if cv2.waitKey(10) == ord('q'):
         break
-    cv2.imshow('Granny Cam', frame1)
+    cv2.imshow('Padma Cam', frame1)
